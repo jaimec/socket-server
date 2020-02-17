@@ -6,9 +6,9 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 
 
-const server = new Server();
+const server = Server.instance;
 
-// BodyParser
+// BodyParser Ya no hace falta, lo trae express de serie
 // server.app.use( bodyParser.urlencoded({ extended: true }) );
 // server.app.use( bodyParser.json() );
 server.app.use( express.urlencoded({ extended: true }) );
